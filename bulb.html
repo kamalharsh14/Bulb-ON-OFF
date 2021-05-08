@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb ON/OFF</title>
+    <style>
+        #bulb{
+            padding: 13% 20% 1% 45%;
+        }
+        #button{
+            margin: 0% 20% 1% 44%;
+            width: 150px; height: 50px;
+        }
+    </style>
+</head>
+<body style="background-color:rgb(243, 243, 243);">
+    <img id="bulb" src="bulboff.jpg" alt="Could'nt load image">
+    <p>
+        <button id="button" onclick="bulb(0)">Turn On</button>
+        <button id="button" onclick="bulb(1)">Turn Off</button>
+        <script>
+            function bulb(n){
+                var onoff;
+                if(n == 0){
+                    onoff = "bulbon.jpg";
+                }
+                else{
+                    onoff = "bulboff.jpg";
+                }
+                document.getElementById("bulb").src = onoff;
+            }
+        </script>
+    </p>
+</body>
+</html>
